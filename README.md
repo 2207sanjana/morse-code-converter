@@ -1,59 +1,55 @@
-# morse-code-converter# Hi, I'm Sanjana Banala 👋
+# Morse Code Converter
 
-**Master's student · Electrical Communication Engineering · University of Kassel, Germany**
+A Python command-line tool that converts text to Morse code and Morse code back to text — with a reference table, demo mode, and clean terminal interface.
 
-Embedded systems engineer with 1 year of professional experience in automotive software development for General Motors vehicle display systems. Passionate about embedded software, automotive electronics, and IoT systems. Currently seeking Werkstudent or entry-level roles in Germany.
+## Demo
+╔══════════════════════════════════════════╗
+║         MORSE CODE CONVERTER             ║
+║   Text <-> Morse  |  by Sanjana Banala   ║
+╚══════════════════════════════════════════╝
+[1] Text  →  Morse code
+[2] Morse →  Text
+[3] Show reference table
+[4] Run demo
+[5] Exit
 
----
+**Example output:**
+Input  : HELLO WORLD
+Morse  : .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+Decoded: HELLO WORLD
+Input  : SOS
+Morse  : ... --- ...
+Decoded: SOS
 
-## Skills & tools
+## Features
+- Convert any text (A–Z, 0–9, punctuation) to Morse code
+- Decode Morse code back to readable text
+- Full reference table for all 26 letters and 10 digits
+- Demo mode with sample conversions
+- Clean terminal interface
 
-| Category | Technologies |
-|---|---|
-| Languages | C, C++, Embedded C, Python, Verilog HDL, MATLAB, Simulink |
-| Embedded | RTOS (automotive), Arduino, sensors, IoT, low-level debugging |
-| FPGA & tools | Vivado, simulation & synthesis, digital logic design |
-| Software tools | Qt Creator, IBM Rhapsody, Visual Studio Code |
-| Hardware | Oscilloscope, multimeter, PCB analysis, circuit design |
-| Cybersecurity | Cisco: Intro to Cybersecurity, Cybersecurity Essentials, CCNA |
-| Documentation | LaTeX, technical reports |
+## How to run
+**Requirements:** Python 3.x — no external libraries needed.
 
----
+```bash
+git clone https://github.com/2207sanjana/morse-code-converter.git
+cd morse-code-converter
+python3 morse_converter.py
+```
 
-## Projects
+## How it works
+Uses a Python dictionary to map every character to its Morse equivalent, and a reverse dictionary for decoding:
 
-| Project | Technologies | Description |
-|---|---|---|
-| [Fire Fighting Robot](https://github.com/2207sanjana/fire-fighting-robot) | Arduino, IoT, sensors | Autonomous robot that detects and extinguishes fires using sensor-based control |
-| [Gesture Vocalizer](https://github.com/2207sanjana/gesture-vocalizer) | Arduino, IoT, Bluetooth | Electronic glove that translates sign language gestures into speech output |
-| [EVM using Verilog](https://github.com/2207sanjana/evm-verilog) | Verilog HDL, FPGA, Vivado | Electronic Voting Machine implemented in hardware description language on FPGA |
+```python
+MORSE_CODE = {'A': '.-', 'B': '-...', 'S': '...', 'O': '---', ' ': '/'}
+REVERSE_MORSE = {v: k for k, v in MORSE_CODE.items()}
+```
 
----
+Words are separated by ` / ` and letters by a single space.
 
-## Experience
+## Skills demonstrated
+`Python` `dictionaries` `loops` `functions` `string manipulation` `signal encoding`
 
-**Junior Software Engineer — PeopleTech Group (General Motors project)**
-*Jan 2024 – Jan 2025 · Hyderabad, India*
-
-Developed embedded software for automotive display systems under the GM development cycle. Worked with C and C++ in a safety-critical environment, contributed to code reviews, hardware-software integration, and UI optimisation using Qt Creator and IBM Rhapsody.
-
----
-
-## Education
-
-- **M.Sc. Electrical Communication Engineering** — University of Kassel, Germany *(current)*
-- **B.E. Electronics and Communication Engineering** — Vasavi College of Engineering, Hyderabad *(2021–2024)*
-
----
-
-## Languages
-
-English (C2) · German (B1/B2) · Telugu (native)
-
----
-
-## Contact
-
-- Email: banalasanjanareddy2207@gmail.com
-- Location: Kassel, Germany
-- LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+## Author
+**Sanjana Banala** — M.Sc. ECE, University of Kassel  
+[GitHub](https://github.com/2207sanjana)
